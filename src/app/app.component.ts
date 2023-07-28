@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import {CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray} from '@angular/cdk/drag-drop';
-import {NgFor} from '@angular/common';
-import {MatTableDataSource} from '@angular/material/table';
+import { Component, OnInit } from '@angular/core';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-root',
@@ -50,7 +49,7 @@ export class AppComponent {
     }
    ];
 
-  columns: any[] = [
+  columns = [
     {
       name: 'number',
       title: '№'

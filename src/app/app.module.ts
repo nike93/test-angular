@@ -6,10 +6,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CdkTableModule } from '@angular/cdk/table';
 import { MatTableModule } from '@angular/material/table';
+import { ResizeColumnDirective } from './directives/resize-column.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ResizeColumnDirective,
   ],
   imports: [
     BrowserModule,

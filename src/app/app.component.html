@@ -5,13 +5,12 @@
 
   <ng-container *ngFor="let column of columns; let i = index"
                 [matColumnDef]="column.name">
-
-    <mat-header-cell *matHeaderCellDef cdkDrag cdkDragLockAxis="x">
-      {{ column.title }}
-    </mat-header-cell>
-
-    <mat-cell *matCellDef="let element">{{ element[column.name] }}</mat-cell>
-
+    <mat-header-cell *matHeaderCellDef
+                     cdkDrag
+                     cdkDragLockAxis="x"
+                     [index]="i"
+                     [resizeColumn]="true">{{ column.title }}</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{ item[column.name] }}</mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="nameColumns"
